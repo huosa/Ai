@@ -1,0 +1,172 @@
+<head>
+  <style>
+   @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(0,0,0);
+  padding: 20px 50px;
+  overflow: hidden;
+}
+
+header h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  width: 90vw;
+  margin: 20px;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  transition: flex 0.5s linear;
+}
+
+.hero:nth-child(1) {
+  background-image: url(https://dkhlak.com/wp-content/uploads/2021/08/79844-f.jpg?ezimgfmt=ngcb62/notWebP);
+}
+
+.hero:nth-child(2) {
+  background-image: url(https://jamalouki.net/jamalouki/uploads/images/2023/09/18/48506.webp);
+}
+
+.hero:nth-child(3) {
+  background-image: url(https://c.files.bbci.co.uk/16174/production/_94648409_thinkstockphotos-148665346.jpg);
+}
+
+.hero:nth-child(4) {
+  background-image: url(https://vzy.s3.amazonaws.com/uploads/651c1b14a84c60f5f065c69f/xrlsroc5_1696684755132.jpg);
+}
+
+.hero:nth-child(5) {
+  background-image: url(https://www.iaea.org/sites/default/files/styles/width_750px_8_units/public/nasa-spacex27.jpg?itok=8GLIZrAu);
+}
+
+.hero:nth-child(6) {
+  background-image: url(https://wallpapercave.com/uwp/uwp4234624.png);
+}
+
+
+.hero h1 {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.hero.active {
+  flex: 5;
+}
+
+.hero.active h1 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 1000px) {
+  .hero:nth-of-type(7),
+  .hero:nth-of-type(8),
+  .hero:nth-of-type(9),
+  .hero:nth-of-type(10),
+  .hero:nth-of-type(11) {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero:nth-of-type(4),
+  .hero:nth-of-type(5),
+  .hero:nth-of-type(6),
+  .hero:nth-of-type(7),
+  .hero:nth-of-type(8),
+  .hero:nth-of-type(9),
+  .hero:nth-of-type(10),
+  .hero:nth-of-type(11),
+  .hero:nth-of-type(12) {
+    display: none;
+  }
+}
+
+  </style>
+</head>
+<body>
+ 
+<div style="float: right; width: 300px;"> <p style="text-align: center;">إعلانات جوجل</p> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-YOUR_PUBLISHER_ID" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script> </div> <style> div { border: 1px solid #ddd; padding: 10px; } </style>
+ <header>
+    <h1>Part of the story - Vision 2030 </h1>
+  </header>
+
+  <main>
+    <div class="hero active">
+      <h1>المقدمة</h1>
+    </div>
+    <div class="hero">
+      <h1>مبادرة الفضاء السعودية</h1>
+    </div>
+    <div class="hero">
+      <h1>علوم الأرض وعلوم الفضاء</h1>
+    </div>
+    <div class="hero">
+      <h1>رحلة إلى محطة الفضاء الدولية</h1>
+    </div>
+    <div class="hero">
+      <h1>العودة من محطة الفضاء الدولية</h1>
+    </div>
+    <div class="hero">
+      <h1>الخلاصة</h1>
+    </div>
+
+  </main>
+
+
+<script>
+const heroes = document.querySelectorAll(".hero");
+
+heroes.forEach((hero) => {
+  hero.addEventListener("click", () => {
+    removeActiveClasses();
+    hero.classList.add("active");
+  });
+});
+
+function removeActiveClasses() {
+  heroes.forEach((hero) => {
+    hero.classList.remove("active");
+  });
+}
+</script>
+
+
+</body>
